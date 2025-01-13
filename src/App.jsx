@@ -5,7 +5,6 @@ import { InfoPane } from "./components/InfoPane";
 import { Dealer } from "./components/Dealer";
 import { GameButton } from "./components/GameButton";
 import { Player } from "./components/Player";
-import { CardsHolder } from "./components/CardsHolder";
 
 function App() {
   const [showInfo, setShowInfo] = useState(false);
@@ -15,11 +14,9 @@ function App() {
       <InfoButton setShowInfo={setShowInfo}/>
       {showInfo ? <InfoPane /> : null}
       <Dealer />
-      <CardsHolder />
       <GameButton purpose={"Hit"}/>
       <GameButton purpose={"Stand"}/>
       <Player />
-      <CardsHolder />
     </div>
   )
 }
