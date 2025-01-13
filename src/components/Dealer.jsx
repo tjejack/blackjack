@@ -1,5 +1,10 @@
+import { CardsHolder } from "./components/CardsHolder";
+
 export const Dealer = () => {
     return (
-        <h2>Dealer</h2>
+        <div>
+            <h2>Dealer</h2>
+            <CardsHolder />
+        </div>
     )
 }
