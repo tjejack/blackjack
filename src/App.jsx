@@ -117,9 +117,8 @@ function App() {
   return (
     <div className="app">
       <h1>Blackjack</h1>
-      <div className="game-over">
         {gameOver ? (
-          <>
+      <div className="game-over">
             <button onClick={resetGame}>Play Again</button>
             <h3>
               {calculateTotal(playerHand) > 21 ? "You're Bust!" : "Game Over!"}
@@ -131,9 +130,8 @@ function App() {
                 ? "You win!"
                 : "Dealer wins!"}
             </h4>
-          </>
-        ) : null}
       </div>
+        ) : null}
       <div className="game-container">
         <div className="cards-container">
           <h2>Dealer</h2>
@@ -153,14 +151,14 @@ function App() {
           ))}
           <div className="total">Total: {calculateTotal(playerHand)}</div>
         </div>
-      <div className="actions">
+
         {playerTurn && !gameOver && (
-          <>
+      <div className="actions">
             <button onClick={hit}>Hit</button>
             <button onClick={stand}>Stand</button>
-          </>
-        )}
         </div>
+        )}
+
       </div>
     </div>
   );
